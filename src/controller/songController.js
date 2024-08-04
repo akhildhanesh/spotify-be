@@ -61,7 +61,7 @@ export const listSong = async (_req, res) => {
 }
 
 export const removeSong = async (req, res) => {
-    const { id } = req.body
+    const { id } = req.params
     songModel.findByIdAndDelete(id)
         .then(data => {
             if (!data) throw new Error('Invalid ID')

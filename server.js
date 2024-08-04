@@ -14,7 +14,7 @@ connectCloudinary()
 app.use(cors())
 
 app.use(express.json())
-app.use(express.urlencoded({ extended: true }))
+// app.use(express.urlencoded({ extended: true }))
 
 app.use('/api/song', songRouter)
 app.use('/api/album', albumRouter)

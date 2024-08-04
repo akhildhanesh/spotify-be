@@ -50,7 +50,7 @@ export const listAlbum = async (req, res) => {
 }
 
 export const removeAlbum = async (req, res) => {
-    const { id } = req.body
+    const { id } = req.params
     albumModel.findByIdAndDelete(id)
         .then(data => {
             if (!data) throw new Error('Invalid ID')

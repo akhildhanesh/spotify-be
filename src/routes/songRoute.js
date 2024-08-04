@@ -14,6 +14,6 @@ songRouter.post('/add', upload.fields([{
 
 songRouter.get('/list', listSong)
 
-songRouter.delete('/remove', removeSong)
+songRouter.delete('/remove/:id', removeSong)
 
 export default songRouter
